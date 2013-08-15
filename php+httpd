@@ -1,0 +1,20 @@
+1. unpack apr and apr-util into ./srclib/apr (prefer to not use the system-provided versions)
+2. install PCRE(Perl-Compatible Regular Expressions Library)
+	$ ./configure  --with-included-apr  --with-pcre --prefix=/usr/local/pcre/
+	$ make;make install
+
+3.install httpd	
+	$ ./configure  --with-included-apr  --with-pcre=/usr/local/pcre --prefix=/usr/local/httpd
+	$ make;make install
+
+4.install php
+	$ ./configure --with-apxs2=/usr/local/httpd/bin/apxs --with-mysql --prefix=/usr/local/php5
+	$ cp php.ini-development /usr/local/lib/php.ini
+
+5.configure httpd
+	 edite httpd.conf:
+		LoadModule php5_module modules/libphp5.so
+
+		<FilesMatch \.php$>
+			SetHandler application/x-httpd-php
+		</FilesMatch>

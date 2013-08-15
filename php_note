@@ -1,0 +1,2 @@
+1.convert string encoding from gb2312 to UTF-8
+  $content = mb_convert_encoding($content,"UTF-8","gb2312");

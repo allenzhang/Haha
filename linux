@@ -1,0 +1,6 @@
+1.判断32位，64位系统
+  if [ `getconf WORD_BIT` = '32' ] && [ `getconf LONG_BIT` = '64' ] ; then
+     ln -s /usr/local/lib/libmcrypt.la /usr/lib64/libmcrypt.la
+  else
+     ln -s /usr/local/lib/libmcrypt.la /usr/lib/libmcrypt.la
+  fi

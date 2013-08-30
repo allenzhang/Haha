@@ -19,4 +19,4 @@
     CFLAGS="-I/usr/local/libevent/include" LDFLAGS="-L/usr/local/libevent/lib" ./configure --prefix=/usr/local/tmux
     make
     make install
-    ln -s /usr/local/tmux/bin/tmux /usr/bin/
+    ln -s /usr/local/tmux/bin/tmux /usr/bin/tmux

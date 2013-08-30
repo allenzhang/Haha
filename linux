@@ -16,7 +16,7 @@
     wget   http://jaist.dl.sourceforge.net/project/tmux/tmux/tmux-1.8/tmux-1.8.tar.gz
     tar -xvf tmux-1.8.tar.gz
     cd tmux-1.8
-    CFLAGS="-I/tmp/libevent/include" LDFLAGS="-L/usr/local/libevent/lib" ./configure --prefix=/usr/local/tmux
+    CFLAGS="-I/usr/local/libevent/include" LDFLAGS="-L/usr/local/libevent/lib" ./configure --prefix=/usr/local/tmux
     make
     make install
     ln -s /usr/local/tmux/bin/tmux /usr/bin/

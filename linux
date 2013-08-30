@@ -9,14 +9,14 @@
 2.install tmux
     wget https://github.com/downloads/libevent/libevent/libevent-2.0.20-stable.tar.gz  
     tar xvzf libevent-2.0.20-stable.tar.gz  
-    ./configure --prefix=/tmp/libevent
+    ./configure --prefix=/usr/local/libevent
     make
     make install
  
     wget   http://jaist.dl.sourceforge.net/project/tmux/tmux/tmux-1.8/tmux-1.8.tar.gz
     tar -xvf tmux-1.8.tar.gz
     cd tmux-1.8
-    CFLAGS="-I/tmp/libevent/include" LDFLAGS="-L/tmp/libevent/lib" ./configure --prefix=/usr/local/tmux
+    CFLAGS="-I/tmp/libevent/include" LDFLAGS="-L/usr/local/libevent/lib" ./configure --prefix=/usr/local/tmux
     make
     make install
     ln -s /usr/local/tmux/bin/tmux /usr/bin/
